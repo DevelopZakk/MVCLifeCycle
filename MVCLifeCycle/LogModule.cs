@@ -19,11 +19,14 @@ namespace MVCLifeCycle
         private void Application_EndRequest(object sender, EventArgs e)
         {
             var context =((HttpApplication) sender).Context;
-            Debug.WriteLine($"{context.Request.Path}");
+            Debug.WriteLine($"{context.Request.Path} End Request");
+           
         }
 
         private void Application_BeginRequest(object sender, EventArgs e)
         {
+            var context = ((HttpApplication)sender).Context;
+            Debug.WriteLine($"{context.Request.Path} Begin Request");
         }
 
         public void Dispose()
