@@ -148,6 +148,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="LogModule.cs" />
     <Compile Include="oldGlobal.asax.cs">
       <DependentUpon>oldGlobal.asax</DependentUpon>
     </Compile>
