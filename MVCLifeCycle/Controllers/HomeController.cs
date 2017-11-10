@@ -7,8 +7,10 @@ using MVCLifeCycle.Extension;
 
 namespace MVCLifeCycle.Controllers
 {
+    [CustomerFilters1]
     public class HomeController : Controller
     {
+        [CustomerFilters2]
         public ActionResult Index()
         {
             return View();
@@ -33,6 +35,12 @@ namespace MVCLifeCycle.Controllers
         {
             ViewBag.Message = "Hello Mobile";
             return View();
+        }
+
+        public ActionResult File()
+        {
+            Response.AddHeader("Content-Disposition", "inline; filename=test.config");
+            return new FileContentResult(System.IO.File.ReadAllBytes(@"D:\web.config"),"application/text");
         }
     }
 }
