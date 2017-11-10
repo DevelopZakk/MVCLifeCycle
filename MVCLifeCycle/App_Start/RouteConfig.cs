@@ -15,7 +15,7 @@ namespace MVCLifeCycle
 
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.Add(new Route("home/test", new SampleRouteHandler()));
+            //routes.Add(new Route("home/test", new SampleRouteHandler()));
 
             routes.MapRoute(
                 name: "Default",
