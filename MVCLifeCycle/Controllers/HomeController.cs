@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using MVCLifeCycle.Extension;
 
 namespace MVCLifeCycle.Controllers
 {
@@ -24,6 +25,13 @@ namespace MVCLifeCycle.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        [IsMobile]
+        public ActionResult Contact(string id)
+        {
+            ViewBag.Message = "Hello Mobile";
             return View();
         }
     }
